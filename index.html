@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        *{padding: 0; margin: 0; list-style: none; text-decoration: none; font-family: 'GmarketSansMedium';}
+        header{width: 100%; height: 190px; background-color: #fef100;}
+        #header_box{width: 1200px; height: 190px;margin: auto; overflow: hidden; position: relative;}
+        #header_icon{width: 60px; height: 23px; position: absolute; top: 30px; right: 20px;}
+        #header_icon>li{margin-left: 3px; float: left;}
+        #header_box1{width: 1200px; height: 98px; margin-top: 15px; }
+        #logo{text-align: center;}
+        #logo>img{width: 101px; height: 98px;}
+        #header_box2{width: 1200px; height: 77px;}
+        #header_box2>ul{line-height: 74px;  text-align: center;}
+        #header_box2>ul>li{width: 200px; height: 77px; float: left;  background: url(icons/bul_vline.png) 0 32px no-repeat; box-sizing: border-box;}
+        #header_box2>ul>li:hover{border-bottom: 3px solid #dc2c3f; cursor: pointer; color: #dc2c3f;}
+        #header_box2>ul>li:first-child{background: none;}
+        #slide{width: 100%; height: 530px; background: url(images/img_visual34.jpg) center top; position: relative;}
+        #slide>ul{position: absolute; width: 100%; bottom: 0; left: 0; text-align: center;}
+        #slide>ul>li{width: 10px; height: 10px; border-radius: 10px; display: inline-block; background-color: #fff;}
+        #slide>ul>li:nth-child(2){background-color: #ffff00;}
+        #slide_leftbtn{width: 40px; height: 60px; background: url(icons/bx-prev2.png) 0 center; position: absolute; left: 20px; top: 0; bottom: 0; margin: auto;}
+        #slide_rightbtn{width: 40px; height: 60px; background: url(icons/bx-next2.png) 0 center; position: absolute; right: 20px; top: 0; bottom: 0; margin: auto;}
+        #section_menu{width: 1200px; height: 288px; margin: auto; margin-top: 20px;}
+        #section_menu>ul{color: #fff; }
+        #section_menu>ul>li{width: 288px; height: 288px; margin-right: 16px; background-color: #3ff; float: left; text-align: center;}
+        #section_menu>ul>li>h3{margin-top: 110px; font-size: 30px;}
+        #section_menu>ul>li>h4{font-size: 22px; font-weight: 100;}
+        #section_menu>ul>li>h5{font-size: 14px; font-weight: 100;}
+        #section_menu>ul>li:nth-child(1){background: url(images/section_menu1.jpg);}
+        #section_menu>ul>li:nth-child(2){background: url(images/section_menu2.jpg);}
+        #section_menu>ul>li:nth-child(3){background: url(images/section_menu3.jpg);}
+        #section_menu>ul>li:nth-child(4){background: url(images/section_menu4.jpg); margin-right: 0;}
+        #news{width: 1200px; margin: auto; margin-top: 40px; overflow: hidden;}
+        #news>ul>li{width: 292px; height: 292px; float: left; margin-right: 10px;}
+        #news h5{color: red; text-align: center; margin-top: 10px; margin-right: 50px;}
+        #news>ul>li>h2{font-weight: 400; font-size: 28px;}
+        #news>ul>li>h3{font-weight: 400;}
+        #news>ul>li>p{margin-top: 20px; font-size: 14px;}
+        #news>ul>li:last-child{margin-right: 0;}
+        #event{width: 1200px; height: 400px; margin: auto; margin-top: 50px;  overflow: hidden;}
+        #event1{width: 50%; height: 400px; float: left;}
+        #event1>h2{font-weight: 100; font-size: 28px; line-height: 55px;}
+        #event1_box{width: 100%; height: 300px; overflow: hidden;}
+        #event1_box>img{transform: scale(1.);  transition: 0.2s;}
+        #event1_box:hover>img{transform: scale(1.02);}
+        #event1_btn{width: 170px; height: 27px; background-color: #ccc; margin: auto; margin-top: 5px; border-radius: 20px; text-align: center; line-height: 27px;}
+        #event1_btn>li{width: 13px; height: 13px; border-radius: 10px; display: inline-block; background-color: #fff; vertical-align: middle;}
+        #event1_btn>li>img{vertical-align: top;}
+        #event1_btn>li:nth-child(1){background-color: #fc0;}
+        #event1_btn>li:nth-child(4),#event1_btn>li:nth-child(5){background-color: transparent}
+        #event2{width: 25%; height: 400px; float: left;}
+        #event2>h3{font-size: 28px; line-height: 55px; font-weight: 400;}
+        #event2_box{width: 100%; height: 300px; overflow: hidden; position: relative;}
+        #event2_box>img:nth-child(1){height: 100%; vertical-align: top;}
+        #event2_box>img:nth-child(2){position: absolute; right: 5px; width: 50px;}
+        #event2_btn{text-align: center; background-color: #ccc; width: 170px; height: 27px; margin: auto; margin-top: 5px; border-radius: 10px;}
+        #event2_btn>li{width: 13px; height: 13px; border-radius: 10px; display: inline-block; background-color: #fff; vertical-align: middle;}
+        #event2_btn>li:nth-child(2){background-color: #fc0;}
+        #event2_btn>li:nth-child(4),#event2_btn>li:nth-child(5){background-color: transparent}
+        #event3{width: 25%; height: 300px; float: left; margin-top: 50px; text-align: center; color: #666;  box-sizing: border-box; vertical-align: top;}
+        #event3_box{overflow: hidden; position: relative;}
+        #event3_box>img:nth-child(1){ vertical-align: middle;height: 100%;}
+        #event3_box>img:nth-child(2){position: absolute; right: 5px; width: 50px;}
+        #best_product{width: 100%; height: 600px; background: url(images/visual_06_1.jpg) center top no-repeat; margin-top: 30px; overflow: hidden;}
+        #best_product_box{width: 1200px; height: 500px; margin: auto; margin-top: 50px; border: 1px solid #000; text-align: center;}
+        #best_product_box>h2{color: #fff; font-size: 25px; text-align: center;}
+        #best_product_box>h4{color: #fff; font-size: 16px; text-align: center;}
+        #best_product_box>ul{overflow: hidden; height: 320px; margin-top: 30px;}
+        #best_product_box>ul>li{width: 220px; height: 320px; margin: 10px; background-color: #fff; float: left;}
+        #best_product_line{width: 30px; height: 1px; margin: 20px auto; background: #fff;}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header_box">
+            <ul id="header_icon">
+                <li><img src="icons/icon_lang.png" alt=""></li>
+                <li><img src="icons/top_chat.png" alt=""></li>
+            </ul>
+            <div id="header_box1">
+                <h1 id="logo">
+                    <img src="icons/logo.png" alt="">
+                </h1>
+            </div>
+            <div id="header_box2">
+                <ul>
+                    <li>회사소개</li>
+                    <li>제품정보</li>
+                    <li>O'Kitchen</li>
+                    <li>홍보센터</li>
+                    <li>고객서비스</li>
+                    <li>오뚜기몰</li>
+                </ul>
+            </div>  
+        </div>
+    </header>
+        <div id="slide">
+            <div id="slide_leftbtn"></div>
+            <div id="slide_rightbtn"></div>
+            <ul id="slide_btn">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+<div id="section_menu">
+    <ul>
+        <li>
+            <h3>오뚜기몰</h3>
+            <h4>바로가기</h4>
+            <h5>more</h5>
+        </li>
+        <li>
+            <h3>나눔미학</h3>
+            <h4>사회공헌</h4>
+            <h5>more</h5>
+        </li>
+        <li>
+            <h3>미래가치</h3>
+            <h4>투자정보</h4>
+            <h5>more</h5>
+        </li>
+        <li>
+            <h3>자연과 함께</h3>
+            <h4>환경 경영</h4>
+            <h5>more</h5>
+        </li>
+    </ul>
+</div>
+<div id="news">
+    <ul>
+        <li>
+            <h2>오뚜기 뉴스</h2>
+            <h5>more</h5>
+        </li>
+        <li>
+            <h3>
+                자회사형 장애인 표준사업장 ‘(주)오뚜기프렌즈’ 개소</h3>
+            <p>오뚜기와 한국장애인고용공단은 지난 11월 11일 오뚜기 안양공장에서 자회사형 장애인 표준사업장 ‘(주)오뚜기프렌즈’ 창립기념식을 개최했습니다.‘자회사형 장애인 표준사업장’은 자회사에 고용된 장애인을 모회사가 고용한 것으로 인정하는 제도로,&...
+                2021.12.22</p>
+        </li>
+        <li>
+            <h3>롤리폴리 꼬또, `2021KDA 스페이스 부문 위너` 선정</h3>
+            <p>지난 12월 22일 ㈜오뚜기의 브랜드경험 공간 "롤리폴리 꼬또"가 국내 대표 디자인 어워드인 `2021 코리아 디자인 어워드`(KDA)에서 스페이스(공간) 디자인 부문 위너(대상)로 선정 되었습니다.KDA는 "안목 높은 클라이언트가...
+                2021.12.22</p>
+        </li>
+        <li>
+            <h3>오뚜기, 여성가족부 선정 ‘가족친화기업’ 재인증 획득</h3>
+            <p>㈜오뚜기가 지난 12월 16일 여성가족부가 선정하는 가족친화기업 재인증을 획득했습니다. 가족친화기업 인증은 여성가족부가 출산 및 양육지원 등 가족친화제도를 모범적으로 운영하는 기업 및 공공기관을 대상으로 심사를 통해 인증을 부여하는 제도입니...
+                2021.12.16</p>
+        </li>
+    </ul>
+</div>
+<div id="event">
+    <div id="event1">
+        <h2>이벤트</h2>
+        <div id="event1_box"><img src="images/2021-06-15_916697337.jpg" alt=""></div>
+        <ul id="event1_btn">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li><img src="icons/btn_play.png" alt=""></li>
+            <li><img src="icons/btn_stop.png" alt=""></li>
+        </ul>
+    </div>
+    <div id="event2">
+        <h3>신제품 소개</h3>
+        <div id="event2_box">
+            <img src="images/2021-01-20_874322340[3] (1).jpg" alt="">
+            <img src="icons/flag_new.png" alt="">
+        </div>
+        <ul id="event2_btn">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li><img src="icons/btn_play.png" alt=""></li>
+            <li><img src="icons/btn_stop.png" alt=""></li>
+        </ul>
+    </div>
+    <div id="event3">
+        <div id="event3_box">
+            <img src="images/2021-12-30_569024252.jpg" alt="">
+            <img src="icons/flag_new.png" alt="">
+            <h4>초간편 감자수제비 키트</h4>
+            <h5>분말/건조식품 > 프리믹스</h5>
+        </div>
+    </div>
+</div>
+<div id="best_product">
+    <div id="best_product_box">
+        <h2>오뚜기 인기상품</h2>
+        <div id="best_product_line"></div>
+        <h4>오뚜기의 인기상품들을 소개 합니다.</h4>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="best_product_box_leftbtn"></div>
+        <div id="best_product_box_rightbtn"></div>
+    </div>
+</div>
+</body>
+</html>
