@@ -73,12 +73,62 @@
         #event3_box>img:nth-child(1){ vertical-align: middle;height: 100%;}
         #event3_box>img:nth-child(2){position: absolute; right: 5px; width: 50px;}
         #best_product{width: 100%; height: 600px; background: url(images/visual_06_1.jpg) center top no-repeat; margin-top: 30px; overflow: hidden;}
-        #best_product_box{width: 1200px; height: 500px; margin: auto; margin-top: 50px; border: 1px solid #000; text-align: center;}
+        #best_product_box{width: 1200px; height: 500px; margin: auto; margin-top: 50px; text-align: center; position: relative;}
         #best_product_box>h2{color: #fff; font-size: 25px; text-align: center;}
         #best_product_box>h4{color: #fff; font-size: 16px; text-align: center;}
         #best_product_box>ul{overflow: hidden; height: 320px; margin-top: 30px;}
-        #best_product_box>ul>li{width: 220px; height: 320px; margin: 10px; background-color: #fff; float: left;}
+        #best_product_box>ul>li{width: 220px; height: 320px; margin: 10px; background-color: #fff; float: left;  position: relative;}
+        #best_product_box>ul>li:hover .best_product_hover{bottom: 0;}
         #best_product_line{width: 30px; height: 1px; margin: 20px auto; background: #fff;}
+        .best_product_imgbox{width: 220px; height: 200px; text-align: center; position: relative;}
+        .best_product_img{height: 200px; background-color: #6ff;}
+        #best_product_box>ul>li>h3{width: 180px; margin: auto; margin-top: 20px; font-weight: 100; height: 50px;}
+        #best_product_box>ul>li>h5{width: 180px; margin: auto; margin-top: 10px; text-align-last: left; font-weight: 100;}
+        .best_product_bgimg{position: absolute; left: 0; bottom: 0;}
+        .best_product_hover{width: 100%; height: 100%; background-color: rgba(244, 54, 23, 0.5); position: absolute; left: 0; bottom: -100%; transition: 0.2s;}
+        .best_product_hoverbox{width: 164px; height: 264px; border: 1px solid #fff; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+        .best_product_hoverbox>img{position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+        #best_product_box_leftbtn{position: absolute; top: 50%; transform: translateY(-50%); left: -50px;}
+        #best_product_box_rightbtn{position: absolute; top: 50%; right: -50px; transform: translateY(-50%);}
+        #okitchen{width: 100%; height: 587px; background-color: #fffee5; overflow: hidden;}
+        #okitchen_box{text-align: center; width: 1200px; height: 587px; margin: auto; margin-top: 50px;}
+        #okitchen_boxline{width: 30px; height: 1px; background-color: red; margin:10px  auto 20px ;}
+        #okitchen_box>h2{font-size: 40px; font-weight: 100; line-height: 60px;}
+        #okitchen_box>h4{font-weight: 100;}
+        #okitchen_box_list>ul>li>h3{font-size: 14px; margin-top: 10px; text-align: left; color: #aaa;}
+        #okitchen_box_list>ul>li>h4{text-align: left; color: #666;}
+        #okitchen_box_list>ul>li>img{width: 275px;}
+        #okitchen_box_list>ul{overflow:hidden; margin-top: 20px;}
+        #okitchen_box_list>ul>li{float: left; width: 277px; height: 300px; margin-right: 30px;}
+        #okitchen_box_list>ul>li:last-child{margin-right: 0;}
+        #sns{width: 100%; height: 800px; background-color: #fff; position: relative; overflow: hidden;}
+        #sns_wrap{width: 1200px; height: 600px; left: 0; right: 0; top: 0; bottom: 50px; margin: auto; text-align: center; position: absolute; overflow: hidden;}
+        #sns_wrap>h3{ font-size: 35px; font-weight: 100;}
+        #sns_wrap>h5{font-weight: 100; margin-bottom: 20px;}
+        #sns_line{width: 30px; height: 1px; background-color: red; margin: 20px auto;}
+        #sns_menu>li{width: 25%; height: 50px; background-color: #ebeff1; float: left; line-height: 50px; margin-top: 10px; color: #666;}
+        #sns_menu>li:first-child{background: #223a6a; color: #fff;}
+        #sns_img{width: 100%;  margin-top: 100px; overflow: hidden;}
+        #sns_img>li{width: 25%; float: left;}
+        #sns_img>li>h5{text-align: left; font-weight: 100;}
+        #sns_img>ul>li>img{width: 100%; vertical-align: top;}
+        #footer{width: 100%; height: 200px;}
+        #footer_up{width: 100%; height: 65px; border-top: 1px solid #aaa; background-color: #f7f7f7;}
+        #footer_up_box{width: 1200px; height: 100%; overflow: hidden; margin: auto;}
+        #footer_up_box_right{float: right;}
+        #footer_up_box_right>li{float: left; margin: 15px  0 0 10px ;}
+        #footer_down{width: 100%; height: 133px; border-top: 1px solid #aaa;}
+        #footer_up_box_left>li{float: left; margin-left: 30px; line-height: 70px;}
+        #footer_up_box_left>li:first-child{margin-left: 0;}
+        #footer_down{width: 100%; height: 135px;}
+        #footer_down_box{width: 1200px; height: 100%; margin: auto; position: relative;}
+        #footer_down_box>ul{height: 100%;}
+        #footer_down_box>ul>li{position: absolute; top: 50%; transform: translateY(-50%); bottom: 0; }
+        #footer_down_box>ul>li:nth-child(2){font-size: 12px; position: absolute; width: 70%; left: 0; right: 0; margin: auto;  font-weight: 100;}
+        #footer_down_box>ul>li:last-child{position: absolute; right: 0; top: 50%; transform: translateY(-50%); bottom: 0;}
+        #footer_down_box>ul>li>address>span::after{ content: "|"; margin-left: 10px;}
+        #up_btn{position: fixed; right: 0; bottom: 0; padding: 0; margin: 0;}
+        .hover_pointer:hover{cursor: pointer;}
     </style>
 </head>
 <body>
@@ -208,15 +258,178 @@
         <div id="best_product_line"></div>
         <h4>오뚜기의 인기상품들을 소개 합니다.</h4>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+                <div class="best_product_imgbox">
+                    <img src="images/2021-04-20_671244888.jpg" alt="" class="best_product_img">
+                    <img src="icons/line.png" alt="" class="best_product_bgimg">
+                </div>
+                <h3>프레스코 토마토 스파게티소스</h3>
+                <h5>조미소스/식품 > 스파게티소스</h5>
+                <div class="best_product_hover">
+                    <div class="best_product_hoverbox">
+                        <img src="icons/btn_view.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="best_product_imgbox">
+                    <img src="images/2020-04-10_1002910728.jpg" alt="" class="best_product_img">
+                    <img src="icons/line.png" alt="" class="best_product_bgimg">
+                </div>
+                <h3>진라면 매운맛</h3>
+                <h5>라면류 > 진라면 매운맛</h5>
+                <div class="best_product_hover">
+                    <div class="best_product_hoverbox">
+                        <img src="icons/btn_view.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="best_product_imgbox">
+                    <img src="images/2020-11-04_289229449[8].jfif" alt="" class="best_product_img">
+                    <img src="icons/line.png" alt="" class="best_product_bgimg">
+                </div>
+                <h3>오즈키친 버섯불고기죽</h3>
+                <h5>레토르트/간편식 > 파우치죽</h5>
+                <div class="best_product_hover">
+                    <div class="best_product_hoverbox">
+                        <img src="icons/btn_view.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="best_product_imgbox">
+                    <img src="images/2020-08-26_559409648[4].png" alt="" class="best_product_img">
+                    <img src="icons/line.png" alt="" class="best_product_bgimg">
+                </div>
+                <h3>라조장 양파</h3>
+                <h5>식용유지 > 고추맛기름</h5>
+                <div class="best_product_hover">
+                    <div class="best_product_hoverbox">
+                        <img src="icons/btn_view.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="best_product_imgbox" >
+                    <img src="images/2021-03-04_1052205015.jpg" alt="" class="best_product_img">
+                    <img src="icons/line.png" alt="" class="best_product_bgimg">
+                </div>
+                <h3>진비빔면</h3>
+                <h5>라면류 > 진비빔면</h5>
+                <div class="best_product_hover">
+                    <div class="best_product_hoverbox">
+                        <img src="icons/btn_view.png" alt="">
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div id="best_product_box_leftbtn"><img src="icons/bx-prev2.png" alt=""></div>
+        <div id="best_product_box_rightbtn"><img src="icons/bx-next2.png" alt=""></div>
+    </div>
+</div>
+<div id="okitchen">
+    <div id="okitchen_box">
+        <h2>O'Kitchen</h2>
+        <div id="okitchen_boxline"></div>
+        <h4>오뚜기가 제안하는 맛있고 건강한 요리</h4>
+        <div id="okitchen_box_list">
+            <ul>
+                <li>
+                    <img src="images/2020-08-25_427863666_2.jpg" alt="" class= "hover_pointer">
+                    <h3>#3일숙성카레 #카레맛집 #쇠고기</h3>
+                    <h4>카레 비프 스튜</h4>
+                </li>
+                <li>
+                    <img src="images/2020-08-21_833988909_2.jpg" alt="" class= "hover_pointer">
+                    <h3>#핫케이크 #시나몬 #브런치</h3>
+                    <h4>더치베이비 팬케이크</h4>
+                </li>
+                <li>
+                    <img src="images/2020-08-24_427853121_14.jpg" alt="" class= "hover_pointer">
+                    <h3>#집밥 #밑반찬 #꿀유자차</h3>
+                    <h4>유자 연근조림</h4>
+                </li>
+                <li>
+                    <img src="images/2020-08-24_427850333_24.jpg" alt="" class= "hover_pointer">
+                    <h3>#갈릭아이올리 #계란요리 #브런치</h3>
+                    <h4>에그마요 샌드위치</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="sns">
+    <div id="sns_wrap">
+        <h3>오뚜기 SNS</h3>
+        <div id="sns_line"></div>
+        <h5>소셜미디어를 통해 보는 오뚜기 스토리를 소개합니다.</h5>
+        <ul id="sns_menu" class= "hover_pointer">
+            <li>오뚜기 데일리</li>
+            <li>오늘,맛으로 행복한세상</li>
+            <li>타바스코 코리아</li>
             <li></li>
         </ul>
-        <div id="best_product_box_leftbtn"></div>
-        <div id="best_product_box_rightbtn"></div>
+        <ul id="sns_img">
+            <li class= "hover_pointer">
+               <img src="images/2022-01-14_127317979.jpg" alt="">
+               <h5>만두 좋아하는 사람 소리 질러~ 초딩요원을 소리 지르게 만든 주인공은..</h5>
+            </li>
+            <li class= "hover_pointer">
+                <img src="images/2022-01-14_127317979_1.jpg" alt="">
+                <h5>손끝 발끝 모두 꽁꽁 얼어붙은 날 핫팩보다 뜨끈~한 칼국수가 생각 납니다!</h5>
+            </li>
+            <li class= "hover_pointer">
+                <img src="images/2022-01-14_127317979_2.jpg" alt="">
+                <h5>맛있는 라면과 카레가 모두 땡기는 날! 초딩요원의 마음을 완벽하게 채워주는...</h5>
+            </li>
+            <li class= "hover_pointer">
+                <img src="images/2022-01-14_127317979_3.jpg" alt="">
+                <h5>카.짜.하로 간편하게 즐기는 한 그릇 요리 새해를 맞아 하루 세끼 든든히 잘...</h5>
+            </li>
+        </ul>
     </div>
+</div>
+</div>
+<div id="up_btn">
+    <img src="icons/btn_Top.png" alt="">
+</div>
+<div id="footer">
+    <div id="footer_up">
+        <div id="footer_up_box">
+            <ul id="footer_up_box_left" class= "hover_pointer">
+                <li>개인정보처리방침</li>
+                <li>고객상담</li>
+                <li>찾아오시는 길</li>
+                <li>오뚜기몰</li>
+                <li>고객상담 챗봇</li>
+            </ul>
+            <ul id="footer_up_box_right" >
+                <li><img src="icons/insta_icon.png" alt="" class= "hover_pointer"></li>
+                <li><img src="icons/blog_icon.png" alt="" class= "hover_pointer"></li>
+                <li><img src="icons/btn_ff.png" alt="" class= "hover_pointer"></li>
+                <li><img src="icons/btn_yt.png" alt="" class= "hover_pointer"></li>
+            </ul>
+        </div>
+        <div id="footer_down">
+            <div id="footer_down_box">
+                <ul>
+                    <li>
+                        <img src="icons/f_logo.jpg" alt="">
+                    </li>
+                    <li>
+                        <address>
+                            <span>(주)오뚜기</span> <span> 사업자등록번호 : 138-81-03238</span> <span> 대표이사 황성만주소 </span> <br> <span>  (14060) 경기도 안양시 동안구 흥안대로 405 (평촌동 160)</span><span> 오뚜기 고객상담실 : 080-024-2311  </span><br> 오뚜기라면 고객상담실 : 080-088-1212 (월~금 08:30~17:00)<br><br>
+                            Copyright ⓒ OTTOGI CORPORATION.,Ltd All Rights Reserved.</address>
+                    </li>
+                    <li>
+                        <img src="icons/2014_WA_mark2.gif" alt="">
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </div>
+    <div id="footer_down"></div>
 </div>
 </body>
 </html>
