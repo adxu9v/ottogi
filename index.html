@@ -107,7 +107,8 @@
         #sns_wrap>h5{font-weight: 100; margin-bottom: 20px;}
         #sns_line{width: 30px; height: 1px; background-color: red; margin: 20px auto;}
         #sns_menu>li{width: 25%; height: 50px; background-color: #ebeff1; float: left; line-height: 50px; margin-top: 10px; color: #666;}
-        #sns_menu>li:first-child{background: #223a6a; color: #fff;}
+        #sns_menu>li:not(:last-child):hover{background: #223a6a; color: #fff;cursor: pointer;}
+        /* #sns_menu>li:first-child{} */
         #sns_img{width: 100%;  margin-top: 100px; overflow: hidden;}
         #sns_img>li{width: 25%; float: left;}
         #sns_img>li>h5{text-align: left; font-weight: 100;}
@@ -364,7 +365,7 @@
         <h3>오뚜기 SNS</h3>
         <div id="sns_line"></div>
         <h5>소셜미디어를 통해 보는 오뚜기 스토리를 소개합니다.</h5>
-        <ul id="sns_menu" class= "hover_pointer">
+        <ul id="sns_menu" >
             <li>오뚜기 데일리</li>
             <li>오늘,맛으로 행복한세상</li>
             <li>타바스코 코리아</li>
