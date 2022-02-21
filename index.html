@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="shortcut icon" href="icons/ottogi.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#sns_bt1').click(function(){
+                $('#sns_box1').show().siblings().hide();
+                $(this).css({'background-color':'#223a6a','color':'#fff'}).siblings().css({'background-color':'#ebeff1','color':'#666'})
+            })
+            $('#sns_bt2').click(function(){
+                $('#sns_box2').show().siblings().hide();
+                $(this).css({'background-color':'#223a6a','color':'#fff'}).siblings().css({'background-color':'#ebeff1','color':'#666'})
+            })
+            $('#sns_bt3').click(function(){
+                $('#sns_box3').show().siblings().hide();
+                $(this).css({'background-color':'#223a6a','color':'#fff'}).siblings().css({'background-color':'#ebeff1','color':'#666'})
+            })
+        })
+    </script>
     <style>
         @font-face {
     font-family: 'GmarketSansMedium';
@@ -102,18 +119,21 @@
         #okitchen_box_list>ul{overflow:hidden; margin-top: 20px;}
         #okitchen_box_list>ul>li{float: left; width: 277px; height: 300px; margin-right: 30px;}
         #okitchen_box_list>ul>li:last-child{margin-right: 0;}
-        #sns{width: 100%; height: 800px; background-color: #fff; position: relative; overflow: hidden;}
-        #sns_wrap{width: 1200px; height: 600px; left: 0; right: 0; top: 0; bottom: 50px; margin: auto; text-align: center; position: absolute; overflow: hidden;}
-        #sns_wrap>h3{ font-size: 35px; font-weight: 100;}
-        #sns_wrap>h5{font-weight: 100; margin-bottom: 20px;}
+        #sns_content{width: 100%; height: 800px; background-color: #fff; position: relative; overflow: hidden;}
+        #sns_content1{width: 1200px; height: 600px; left: 0; right: 0; top: 0; bottom: 50px; margin: auto; text-align: center; position: absolute; overflow: hidden;}
+        #sns_content1>h3{ font-size: 35px; font-weight: 100;}
+        #sns_content1>h5{font-weight: 100; margin-bottom: 20px;}
         #sns_line{width: 30px; height: 1px; background-color: red; margin: 20px auto;}
-        #sns_menu>li{width: 25%; height: 50px; background-color: #ebeff1; float: left; line-height: 50px; margin-top: 10px; color: #666;}
-        #sns_menu>li:not(:last-child):hover{background: #223a6a; color: #fff;cursor: pointer;}
+        #sns_content1>#sns_menu>li{width: 25%; margin-right: 0; height: 50px; background-color: #ebeff1 ; float: left; line-height: 50px; margin-top: 10px; color: #666; }
+        #sns_content1>#sns_menu>li:hover{background: #223a6a; color: #fff;cursor: pointer;}
         /* #sns_menu>li:first-child{} */
-        #sns_img{width: 100%;  margin-top: 100px; overflow: hidden;}
-        #sns_img>li{width: 25%; float: left;}
-        #sns_img>li>h5{text-align: left; font-weight: 100;}
-        #sns_img>ul>li>img{width: 100%; vertical-align: top;}
+        #sns_box>ul{width: 100%;  margin-top: 100px; overflow: hidden;}
+        #sns_content1 ul>li{width: 23.5%; float: left; margin-right: 2%;}
+        #sns_content1 ul>li:last-child{margin-right: 0;}
+        #sns_content1 ul>li>h5{text-align: left; font-weight: 100;}
+        #sns_content1 ul>li>img{width: 100%; vertical-align: top;}
+        #sns_box2{display: none;}
+        #sns_box3{display: none;}
         #footer{width: 100%; height: 200px;}
         #footer_up{width: 100%; height: 65px; border-top: 1px solid #aaa; background-color: #f7f7f7;}
         #footer_up_box{width: 1200px; height: 100%; overflow: hidden; margin: auto;}
@@ -338,22 +358,22 @@
         <div id="okitchen_box_list">
             <ul>
                 <li>
-                    <img src="images/2020-08-25_427863666_2.jpg" alt="" class= "hover_pointer">
+                    <img src="images/2020-08-25_427863666[2].jpg" alt="" class= "hover_pointer">
                     <h3>#3일숙성카레 #카레맛집 #쇠고기</h3>
                     <h4>카레 비프 스튜</h4>
                 </li>
                 <li>
-                    <img src="images/2020-08-21_833988909_2.jpg" alt="" class= "hover_pointer">
+                    <img src="images/2020-08-21_833988909[2].jpg" alt="" class= "hover_pointer">
                     <h3>#핫케이크 #시나몬 #브런치</h3>
                     <h4>더치베이비 팬케이크</h4>
                 </li>
                 <li>
-                    <img src="images/2020-08-24_427853121_14.jpg" alt="" class= "hover_pointer">
+                    <img src="images/2020-08-24_427853121[14].jpg" alt="" class= "hover_pointer">
                     <h3>#집밥 #밑반찬 #꿀유자차</h3>
                     <h4>유자 연근조림</h4>
                 </li>
                 <li>
-                    <img src="images/2020-08-24_427850333_24.jpg" alt="" class= "hover_pointer">
+                    <img src="images/2020-08-24_427850333[24].jpg" alt="" class= "hover_pointer">
                     <h3>#갈릭아이올리 #계란요리 #브런치</h3>
                     <h4>에그마요 샌드위치</h4>
                 </li>
@@ -361,35 +381,73 @@
         </div>
     </div>
 </div>
-<div id="sns">
-    <div id="sns_wrap">
+<div id="sns_content">
+    <div id="sns_content1">
         <h3>오뚜기 SNS</h3>
         <div id="sns_line"></div>
         <h5>소셜미디어를 통해 보는 오뚜기 스토리를 소개합니다.</h5>
-        <ul id="sns_menu" >
-            <li>오뚜기 데일리</li>
-            <li>오늘,맛으로 행복한세상</li>
-            <li>타바스코 코리아</li>
+        <ul id="sns_menu">
+            <li id="sns_bt1">오뚜기 데일리</li>
+            <li id="sns_bt2">오늘,맛으로 행복한세상</li>
+            <li id="sns_bt3">타바스코 코리아</li>
             <li></li>
         </ul>
-        <ul id="sns_img">
-            <li class= "hover_pointer">
-               <img src="images/2022-01-14_127317979.jpg" alt="">
-               <h5>만두 좋아하는 사람 소리 질러~ 초딩요원을 소리 지르게 만든 주인공은..</h5>
-            </li>
-            <li class= "hover_pointer">
-                <img src="images/2022-01-14_127317979_1.jpg" alt="">
-                <h5>손끝 발끝 모두 꽁꽁 얼어붙은 날 핫팩보다 뜨끈~한 칼국수가 생각 납니다!</h5>
-            </li>
-            <li class= "hover_pointer">
-                <img src="images/2022-01-14_127317979_2.jpg" alt="">
-                <h5>맛있는 라면과 카레가 모두 땡기는 날! 초딩요원의 마음을 완벽하게 채워주는...</h5>
-            </li>
-            <li class= "hover_pointer">
-                <img src="images/2022-01-14_127317979_3.jpg" alt="">
-                <h5>카.짜.하로 간편하게 즐기는 한 그릇 요리 새해를 맞아 하루 세끼 든든히 잘...</h5>
-            </li>
-        </ul>
+        <div id="sns_box">
+            <ul id="sns_box1">
+                <li class= "hover_pointer">
+                   <img src="images/2022-01-14_127317979.jpg" alt="">
+                   <h5>만두 좋아하는 사람 소리 질러~ 초딩요원을 소리 지르게 만든 주인공은..</h5>
+                </li>
+                <li class= "hover_pointer">
+                    <img src="images/2022-01-14_127317979[1].jpg" alt="">
+                    <h5>손끝 발끝 모두 꽁꽁 얼어붙은 날 핫팩보다 뜨끈~한 칼국수가 생각 납니다!</h5>
+                </li>
+                <li class= "hover_pointer">
+                    <img src="images/2022-01-14_127317979[2].jpg" alt="">
+                    <h5>맛있는 라면과 카레가 모두 땡기는 날! 초딩요원의 마음을 완벽하게 채워주는...</h5>
+                </li>
+                <li class= "hover_pointer">
+                    <img src="images/2022-01-14_127317979[3].jpg" alt="">
+                    <h5>카.짜.하로 간편하게 즐기는 한 그릇 요리 새해를 맞아 하루 세끼 든든히 잘...</h5>
+                </li>
+            </ul>
+            <ul id="sns_box2">
+                <li class= "hover_pointer">
+                   <img src="images/2022-02-18_815906818[1].jpg" alt="">
+                   <h5>여러분의 졸업을 진심으로 축하드림돠! 아재요원은 2월 졸업 시즌이 다가올 때마다...</h5>
+                </li>
+                <li class= "hover_pointer">
+                    <img src="images/2022-02-18_815906818[5].jpg" alt="">
+                    <h5>[태그이벤트] HAPPY VALENTINE DAY 공기마저 달달한~ 발렌타인데이의 필수템!</h5>
+                </li>
+                <li class= "hover_pointer">
+                    <img src="images/2022-02-18_815906818[6].jpg" alt="">
+                    <h5>간편하게 즐기는 대박 맛집 메뉴 고기리 들기름막국수를 집에서 만나욧! 거기에 육수...</h5>
+                </li>
+                <li class= "hover_pointer">
+                    <img src="images/2022-02-18_815906818[7].jpg" alt="">
+                    <h5>취향 따라 즐기는 오뚜끼 컵누들 시리즈! 오늘은 그 중에서도 초딩요원이 애정하는...</h5>
+                </li>
+            </ul>
+            <ul id="sns_box3">
+                <li class= "hover_pointer">
+                   <img src="images/2021-12-31_782870949[9].jpg" alt="">
+                   <h5>늘 먹던 팥 대신 통 모짜 호두과자! 집에서까찌 만들어 먹는 이 열정..ㅎ</h5>
+                </li>
+                <li class= "hover_pointer">
+                    <img src="images/2021-12-24_573722253[10].jpg" alt="">
+                    <h5>K-디저트 삼겹살 볶음밥 삼겹살 지글지글 구워 한 판 먹고 밥으로 마무리 ...</h5>
+                </li>
+                <li class= "hover_pointer">
+                    <img src="images/2021-12-31_782870949[10].jpg" alt="">
+                    <h5>지난 주말 야식은 꼬막 국수 타바스코 스리라차로 조물조물 양념하면 국수 ...</h5>
+                </li>
+                <li class= "hover_pointer">
+                    <img src="images/2021-12-31_782870949[11].jpg" alt="">
+                    <h5>이번 크리스마스엔 타바스코와 홈스윗홈</h5>
+                </li>
+            </ul>
+        </div>    
     </div>
 </div>
 </div>
