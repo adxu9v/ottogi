@@ -21,6 +21,12 @@
                 $('#sns_box3').show().siblings().hide();
                 $(this).css({'background-color':'#223a6a','color':'#fff'}).siblings().css({'background-color':'#ebeff1','color':'#666'})
             })
+            let slide100 = 0;
+            $('#slide_leftbtn').click(function(){
+                slide100 = slide100 + 100;
+                if(slide100>-700){slide100=0}
+                $('#slide_imgbox').animate({'left':slide100+'%'})
+            })
             $('#event1_btn>li:nth-child(1)').click(function(){
                 $('#event1_slide').stop().animate({'left':'0%'})
                 $(this).css({'background-color':'#fef100'}).siblings('.event2_btn_a').css({'background-color':'#fff'})
@@ -58,7 +64,7 @@
                 $(this).css({'background-color':'#fef100'}).siblings().css({'background-color':'#fff'})
             })
             $('#up_btn').click(function(){
-                $('html, body').animate({'scrollTop':'0'},0)
+                $('html, body').animate({'scrollTop':'0'},500)
             })
         })
     </script>
