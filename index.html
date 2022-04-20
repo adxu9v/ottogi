@@ -64,7 +64,26 @@
                 $(this).css({'background-color':'#fef100'}).siblings().css({'background-color':'#fff'})
             })
             $('#up_btn').click(function(){
-                $('html, body').animate({'scrollTop':'0'},500)
+                $('html, body').stop().animate({'scrollTop':'0'},500)
+            })
+            let num = 0;
+            setInterval(function(){
+                num = num - 100;
+                if(num < -700){num = 0;}
+                $('#slide_imgbox').stop().animate({'left':num+'%'})
+                $('#slide_btn>li:nth-child('+((num*-0.01)+1)+')').stop().css({'background-color':'#fef100'}).siblings().css({'background-color':'#fff'})
+            },3000)
+            $('#slide_leftbtn').click(function(){
+                num = num + 100;
+                if(num > 0){num = -700}
+                $('#slide_imgbox').stop().animate({'left':num+'%'})
+                $('#slide_btn>li:nth-child('+((num*-0.01)+1)+')').stop().css({'background-color':'#fef100'}).siblings().css({'background-color':'#fff'})
+            })
+            $('#slide_rightbtn').click(function(){
+                num = num - 100;
+                if(num < -700){num = 0}
+                $('#slide_imgbox').stop().animate({'left':num+'%'})
+                $('#slide_btn>li:nth-child('+((num*-0.01)+1)+')').stop().css({'background-color':'#fef100'}).siblings().css({'background-color':'#fff'})
             })
         })
     </script>
@@ -260,7 +279,9 @@
                 <li></li>
             </ul>
             <div id="slide_leftbtn">
-                <div id="slide_leftbtn_hover"></div><img src="icons/bx-prev2.png" alt=""></div>
+                <div id="slide_leftbtn_hover"></div>
+                <img src="icons/bx-prev2.png" alt="">
+            </div>
             <div id="slide_rightbtn">
                 <div id="slide_rightbtn_hover"></div>
                 <img src="icons/bx-next2.png" alt="">
