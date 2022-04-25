@@ -27,37 +27,19 @@
                 if(slide100>-700){slide100=0}
                 $('#slide_imgbox').animate({'left':slide100+'%'})
             })
-            $('#event1_btn>li:nth-child(1)').click(function(){
-                $('#event1_slide').stop().animate({'left':'0%'})
+            $('#event1_btn>li:not(#event1_btn>li:nth-child(5),#event1_btn>li:nth-child(6))').click(function(){
                 $(this).css({'background-color':'#fef100'}).siblings('.event2_btn_a').css({'background-color':'#fff'})
-
+                $('#event1_slide').stop().animate({'left':($(this).index()*-100)+'%'})
             })
-            $('#event1_btn>li:nth-child(2)').click(function(){
-                $('#event1_slide').stop().animate({'left':'-100%'})
-                $(this).css({'background-color':'#fef100'}).siblings('.event2_btn_a').css({'background-color':'#fff'})
-
-            })
-            $('#event1_btn>li:nth-child(3)').click(function(){
-                $('#event1_slide').stop().animate({'left':'-200%'})
-                $(this).css({'background-color':'#fef100'}).siblings('.event2_btn_a').css({'background-color':'#fff'})
-
-            })
-            $('#event1_btn>li:nth-child(4)').click(function(){
-                $('#event1_slide').stop().animate({'left':'-300%'})
-                $(this).css({'background-color':'#fef100'}).siblings('.event2_btn_a').css({'background-color':'#fff'})
-
-            })
-            $('#event2_btn>li:nth-child(1)').click(function(){
-                $('#event2_slide').stop().animate({'left':'0%'});
+            $('#event2_btn>li:not(#event2_btn>li:nth-child(4),#event1_btn>li:nth-child(5))').mouseenter(function(){
                 $(this).css({'background-color':'#fef100'}).siblings('.event2_btn_a').css({'background-color':'#fff'})
             })
-            $('#event2_btn>li:nth-child(2)').click(function(){
-                $('#event2_slide').stop().animate({'left':'-100%'});
-                $(this).css({'background-color':'#fef100'}).siblings('.event2_btn_a').css({'background-color':'#fff'})
+            $('#event2_btn>li:not(#event2_btn>li:nth-child(4),#event1_btn>li:nth-child(5))').mouseleave(function(){
+                $(this).css({'background-color':'#fff'})
             })
-            $('#event2_btn>li:nth-child(3)').click(function(){
-                $('#event2_slide').stop().animate({'left':'-200%'});
-                $(this).css({'background-color':'#fef100'}).siblings('.event2_btn_a').css({'background-color':'#fff'})
+            $('#event2_btn>li:not(#event2_btn>li:nth-child(4),#event1_btn>li:nth-child(5))').click(function(){
+                $(this).css({'background-color':'#fef100'})
+                $('#event2_slide').stop().animate({'left':($(this).index()*-100)+'%'})
             })
             $('#slide_btn>li').click(function(){
                 $('#slide_imgbox').animate({'left':$(this).index()*-100+'%'})
@@ -110,23 +92,16 @@
         #slide{width: 100%; height: 530px; position: relative; cursor: pointer; background-color: green; overflow: hidden;}
         #slide_imgbox{width: 800%; height: 100%; position: absolute; left: 0; top: 0;}
         #slide_imgbox>li{width: 12.5%; height: 100%; float: left;}
-        #slide_imgbox>li:nth-child(1){background: url(images/img_visual40.jpg) center no-repeat; background-size: cover;}
-        #slide_imgbox>li:nth-child(2){background: url(images/img_visual37.jpg) center no-repeat; background-size: cover;}
-        #slide_imgbox>li:nth-child(3){background: url(images/img_visual36.jpg) center no-repeat; background-size: cover;}
-        #slide_imgbox>li:nth-child(4){background: url(images/img_visual38.jpg) center no-repeat; background-size: cover;}
-        #slide_imgbox>li:nth-child(5){background: url(images/img_visual39.jpg) center no-repeat; background-size: cover;}
-        #slide_imgbox>li:nth-child(6){background: url(images/img_visual32.jpg) center no-repeat; background-size: cover;}
-        #slide_imgbox>li:nth-child(7){background: url(images/img_visual24.jpg) center no-repeat; background-size: cover;}
-        #slide_imgbox>li:nth-child(8){background: url(images/img_visual22.jpg) center no-repeat; background-size: cover;}
+        #slide_imgbox>li>img{width: 100%; height: 100%;}
         #slide_btn{position: absolute; width: 100%; bottom: 0; left: 0; text-align: center;}
         #slide_btn>li{width: 10px; height: 10px; border-radius: 10px; display: inline-block; background-color: #fff;}
         #slide_btn>li:first-child{background-color: #fef100;}
         #slide_leftbtn{width: 40px; height: 70px; position: absolute; left: 20px; top: 0; bottom: 0; margin: auto; cursor: pointer; box-sizing: border-box;}
         #slide_leftbtn>img{width: 100%;}
-        #slide_leftbtn_hover{width: 40px; height: 75px; border: 1px solid #eee; box-sizing: border-box; position: absolute; display: none;}
+        #slide_leftbtn_hover{width: 40px; height: 75px; box-sizing: border-box; position: absolute; display: none;}
         #slide_leftbtn:hover #slide_leftbtn_hover{display: block;}
         #slide_rightbtn{width: 40px; height: 60px; position: absolute; right: 20px; top: 0; bottom: 0; margin: auto; cursor: pointer;}
-        #slide_rightbtn_hover{width: 40px; height: 75px; border: 1px solid #eee; box-sizing: border-box; position: absolute; display: none;}
+        #slide_rightbtn_hover{width: 40px; height: 75px; box-sizing: border-box; position: absolute; display: none;}
         #slide_rightbtn:hover #slide_rightbtn_hover{display: block;}
         #section_menu{width: 1200px; height: 288px; margin: auto; margin-top: 20px;}
         #section_menu>ul{color: #fff; }
@@ -159,7 +134,7 @@
         #event1_btn>li>img{vertical-align: top;}
         #event1_btn>li:nth-child(1){background-color: #fef100;}
         #event1_btn>li:nth-child(5),#event1_btn>li:nth-child(6){background-color: transparent}
-        #event1_btn>li:hover{background-color: #fef100;}
+        #event1_btn>li:not(#event1_btn>li:nth-child(5),#event1_btn>li:nth-child(6)):hover{background-color: #fef100;}
         #event2{width: 25%; height: 400px; float: left;}
         #event2>h3{font-size: 28px; line-height: 55px; font-weight: 400;}
         #event2_box{width: 300px; height: 300px;  position: relative; overflow: hidden; box-sizing: border-box; cursor: pointer;}
@@ -172,7 +147,7 @@
         #event2_btn>li{width: 13px; height: 13px; border-radius: 10px; display: inline-block; background-color: #fff; vertical-align: middle; cursor: pointer;}
         #event2_btn>li:nth-child(1){background-color: #fef100;}
         #event2_btn>li:nth-child(4),#event2_btn>li:nth-child(5){background-color: transparent}
-        #event2_btn>li:hover{background-color: #fef100;}
+        #event2_btn>li:not(#event2_btn>li:nth-child(4),#event2_btn>li:nth-child(5)):hover{background-color: #fef100;}
         #event3{width: 25%; height: 400px; float: left; text-align: center; color: #666;  box-sizing: border-box;}
         #event3_box{position: relative; width: 300px; height: 300px; border: 1px solid #ddd; box-sizing: border-box; margin-top: 54px; cursor: pointer;}
         #event3_box>img:nth-child(1){vertical-align: top; height: 70%;}
@@ -269,14 +244,14 @@
     </header>
         <div id="slide">
             <ul id="slide_imgbox">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><img src="images/img_visual40.jpg" alt=""></li>
+                <li><img src="images/img_visual37.jpg" alt=""></li>
+                <li><img src="images/img_visual36.jpg" alt=""></li>
+                <li><img src="images/img_visual38.jpg" alt=""></li>
+                <li><img src="images/img_visual39.jpg" alt=""></li>
+                <li><img src="images/img_visual32.jpg" alt=""></li>
+                <li><img src="images/img_visual24.jpg" alt=""></li>
+                <li><img src="images/img_visual22.jpg" alt=""></li>
             </ul>
             <div id="slide_leftbtn">
                 <div id="slide_leftbtn_hover"></div>
