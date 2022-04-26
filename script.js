@@ -6,6 +6,9 @@ $(document).ready(function(){
     $('#sns_menu>li:not(#sns_menu>li:last-child)').mouseenter(function(){
         $(this).css({'background-color':'#223a6a','color':'#fff'}).siblings().not('.sns_click').css({'background-color':'#ebeff1','color':'#666'})
     })
+    $('#sns_menu>li:not(#sns_menu>li:last-child)').mouseleave(function(){
+        $(this).not('.sns_click').css({'background-color':'#ebeff1','color':'#666'})
+    })
     let slide100 = 0;
     $('#slide_leftbtn').click(function(){
         slide100 = slide100 + 100;
